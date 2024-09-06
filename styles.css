@@ -41,6 +41,19 @@ input {
     border-bottom:solid 2px #2a0845 ;
 }
 
+input:active {
+    border: solid 2px blue;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: #2a0845;
+}
+
 #palindrome-definition {
     height: 200px;
     width: 450px;
@@ -64,3 +77,9 @@ input {
     font-weight: 600;
 }
  
+#input-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
