@@ -25,15 +25,20 @@ body {
 #input-container {
     background-color: white;
     margin: 20px;
+    padding: 20px;
     height: 150px;
     width: 450px;
     border-radius: 20px;
+    text-align: center;
+    color:#2a0845;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-#input-container-title {
-    color:#2a0845;
-    text-align: center;
-    margin: 20px;
+input {
+    border: none;
+    border-bottom:solid 2px #2a0845 ;
 }
 
 #palindrome-definition {
