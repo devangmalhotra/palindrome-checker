@@ -90,6 +90,10 @@ button:hover {
     gap: 20px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 @media screen and (max-width: 515px) {
     #input-container {
         width: 300px;
