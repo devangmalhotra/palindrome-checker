@@ -4,10 +4,13 @@ let inputContainer = document.getElementById("input-container");
 let testVar = "test";
 let isPalindrome = false;
 
-const checkIfPalindrome = () => { //use toString to convert array to string
+const checkIfPalindrome = () => { 
     let phrase = userTextBox.value;
     let originalCharsArray = [];
-    let reversedCharsArray = []
+    let reversedCharsArray = [];
+    let originalCharsString = "";
+    let reversedCharsString = "";
+    
     for (i = 0; i < phrase.length; i++) {
         originalCharsArray.push(phrase[i]);
     }
@@ -15,13 +18,13 @@ const checkIfPalindrome = () => { //use toString to convert array to string
     for (i = (phrase.length - 1); i >= 0; i--) {
         reversedCharsArray.push(phrase[i]);
     }
-    if (reversedCharsArray == originalCharsArray) {
-        alert(yes);
-    }
 
-    alert(reversedCharsArray === originalCharsArray);
-    alert(reversedCharsArray);
-    alert(originalCharsArray);
+    originalCharsString = originalCharsArray.join("");
+    reversedCharsString = reversedCharsArray.join("");
+
+    isPalindrome = originalCharsString === reversedCharsString;
+
+    addResultLine();
 
     return;
 }
@@ -29,7 +32,7 @@ const checkIfPalindrome = () => { //use toString to convert array to string
 const addResultLine = () => {
     if (userTextBox.value === "") {
         alert("Please enter a string.")
-    } else {
+    } else if (isPalindrome === false) {
         inputContainer.innerHTML += `<h4>"${userTextBox.value}" is not a palindrome.</h4>`;
     }
 }
