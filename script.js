@@ -1,8 +1,9 @@
-let userTextBox = document.getElementById("input-container-text");
-let checkButton = document.getElementById("check-button");
+let userTextBox = document.getElementById("text-input");
+let checkButton = document.getElementById("check-btn");
 let inputContainer = document.getElementById("input-container");
 let testVar = "test";
 let isPalindrome = false;
+let resultDiv = document.getElementById("result-div");
 
 const checkIfPalindrome = () => { 
     let phrase = userTextBox.value;
@@ -33,7 +34,7 @@ const addResultLine = () => {
     if (userTextBox.value === "") {
         alert("Please enter a string.")
     } else if (isPalindrome === false) {
-        inputContainer.innerHTML += `<h4>"${userTextBox.value}" is not a palindrome.</h4>`;
+        inputContainer.innerHTML += `<p>"${userTextBox.value}" is not a palindrome.</p>`;
     }
 }
 

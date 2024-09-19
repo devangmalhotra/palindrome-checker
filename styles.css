@@ -90,6 +90,10 @@ button:hover {
     gap: 20px;
 }
 
+p {
+    font-weight: bold;
+}
+
 .hidden {
     display: none !important;
 }
